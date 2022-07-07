@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getRanking, postBattle } from "../controllers/controller";
+import { getRanking, postBattle } from "../controllers/controller.js";
 
 const router = Router();
 

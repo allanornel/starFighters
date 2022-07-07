@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { battleService, rankingService } from "../services/services";
+import { battleService, rankingService } from "../services/services.js";
 
 export async function postBattle(req: Request, res: Response) {
   const { firstUser, secondUser }: { firstUser: string; secondUser: string } =
@@ -10,7 +10,7 @@ export async function postBattle(req: Request, res: Response) {
   res.status(200).send(success);
 }
 
-export function getRanking(req: Request, res: Response) {
-  const success = rankingService();
+export async function getRanking(req: Request, res: Response) {
+  const success = await rankingService();
   res.send(success);
 }

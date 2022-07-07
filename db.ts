@@ -7,7 +7,7 @@ const { Pool } = pg;
 
 const databaseConfig = {
   connectionString: process.env.DATABASE_URL,
-  ssl: {}
+  ssl: null,
 };
 
 if (process.env.MODE === "PROD") {
