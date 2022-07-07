@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import router from "./routes/router";
 import { errorHandlingMiddleware } from "./middlewares/errorHandlerMiddleware";
 
-
 const port = +process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
@@ -13,9 +12,8 @@ app.use(cors());
 dotenv.config();
 
 app.use(router);
-app.use(errorHandlingMiddleware)
-
+app.use(errorHandlingMiddleware);
 
 app.listen(port, () => {
-    console.log('SERVER ON, PORT: '+port);
-})
+  console.log("SERVER ON, PORT: " + port);
+});
